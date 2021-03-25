@@ -170,6 +170,8 @@ services:
     image: "dtagdevsec/logstash:2006"
     volumes:
      - /data:/data
+     - /etc/ssl/certs:/etc/ssl/certs
+     - /etc/logstash/conf.d:/etc/logstash/conf.d
 
 ## Elasticsearch-head service
   head:
