@@ -29,6 +29,8 @@ RUN apk -U --no-cache add \
     tar xvfz logstash-$LS_VER-linux-x86_64.tar.gz --strip-components=1 -C /usr/share/logstash/ && \
     rm -rf /usr/share/logstash/jdk && \
     /usr/share/logstash/bin/logstash-plugin install logstash-filter-translate && \
+    /usr/share/logstash/bin/logstash-plugin install logstash-input-lumberjack && \
+    /usr/share/logstash/bin/logstash-plugin install logstash-output-lumberjack && \
     /usr/share/logstash/bin/logstash-plugin install logstash-output-syslog && \
 #
 # Add and move files
