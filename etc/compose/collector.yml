@@ -165,6 +165,9 @@ services:
     depends_on:
       elasticsearch:
         condition: service_healthy
+    ports:
+     - "0.0.0.0:65501:65501"
+     - "0.0.0.0:65502:65502"
     env_file:
      - /opt/tpot/etc/compose/elk_environment
     image: "dtagdevsec/logstash:2006"
