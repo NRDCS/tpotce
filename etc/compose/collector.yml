@@ -170,11 +170,10 @@ services:
      - "0.0.0.0:65502:65502"
     env_file:
      - /opt/tpot/etc/compose/elk_environment
-    image: "dtagdevsec/logstash:2006"
+    # image: "dtagdevsec/logstash:2006"
+    image: "logstash_collector:latest"
     volumes:
      - /data:/data
-     - /etc/ssl/certs:/etc/ssl/certs
-     - /etc/logstash/conf.d:/etc/logstash/conf.d
 
 ## Elasticsearch-head service
   head:

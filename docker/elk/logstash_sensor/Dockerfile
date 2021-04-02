@@ -40,8 +40,7 @@ RUN apk -U --no-cache add \
     mkdir -p /etc/logstash/conf.d && \
     cp logstash.conf /etc/logstash/conf.d/ && \
     cp tpot_es_template.json /etc/logstash/ && \
-    cp certlt.crt /etc/ssl/certs/ && \
-    cp certlt.key /etc/ssl/certs/ && \
+    cp tpot_nrdcs.crt /etc/ssl/certs/ && \
 #
 # Setup user, groups and configs
     addgroup -g 2000 logstash && \
